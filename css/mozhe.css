@@ -1,0 +1,16 @@
+
+
+.heading {
+    margin-left: auto; 
+    margin-right: auto;
+    width: 400px;
+    text-align: center;
+}
+
+.fp-next {
+    right: 50px !important;
+}
+
+.fp-prev {
+    left: 50px !important;
+}

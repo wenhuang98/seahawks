@@ -1,0 +1,128 @@
+
+<html>
+<head>
+
+<meta  charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
+
+<link rel="stylesheet" type="text/css" href="css/mozhe.css"/>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+
+<!-- This following line is needed only in case of using other easing effect rather than "linear", "swing" or "easeInQuart". You can also add the full jQuery UI instead of this file if you prefer -->
+<script src="bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
+
+
+<!-- This following line needed in the case of using the plugin option `scrollOverflow:true` -->
+<script type="text/javascript" src="bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+
+<script type="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+        //Navigation
+        menu: false,
+        anchors:['landing', 'examples','signup'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['landing', 'examples', 'signup'],
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+
+        //Scrolling
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        normalScrollElements: '#element1, .element2',
+        scrollOverflow: false,
+        touchSensitivity: 5,
+        normalScrollElementTouchThreshold: 5,
+
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Design
+        controlArrows: true,
+        verticalCentered: true,
+        resize : false,
+        sectionsColor : ['#1bbc9b', '#4BBFC3', '#C63D0F'],
+        paddingTop: '3em',
+        paddingBottom: '10px',
+        fixedElements: '#header, .footer',
+        responsive: 0,
+
+        //Custom selectors
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        //events
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction){}
+    });
+});
+</script>
+</head>
+
+<body>
+<div id="fullpage">
+  <div class="section">
+      <div class="heading">
+        <h1>群众创造数据无限可能</h1>
+      </div>
+  </div>
+  <div class="section">
+    <div class="slide">
+      <div class="heading">
+        <h1>数据分类</h1>
+      </div> 
+    </div>
+    <div class="slide">
+      <div class="heading">
+        <h1>搜集信息</h1>
+      </div> 
+    </div>
+    <div class="slide">
+      <div class="heading">
+        <h1>内容审查</h1>
+      </div> 
+    </div>
+    <div class="slide">
+      <div class="heading">
+        <h1>发布问卷</h1>
+      </div> 
+    </div>
+    <div class="slide">
+      <div class="heading">
+        <h1>更多</h1>
+      </div> 
+    </div>
+  </div>
+  <div class="section">
+    <div class="heading">
+      <h1>了解更多</h1>
+    </div> 
+  </div>
+    <!--
+    <div class="section">Some section</div>
+    <div class="section">Some section</div>
+    -->
+</div>
+
+</body>
+</html>
