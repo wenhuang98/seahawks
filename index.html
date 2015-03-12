@@ -2,13 +2,22 @@
 <html>
 <head>
 
-<meta  charset="utf-8" />
+<meta charset="utf-8" />
 
 <link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
 
 <link rel="stylesheet" type="text/css" href="css/mozhe.css"/>
 
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 <!-- This following line is needed only in case of using other easing effect rather than "linear", "swing" or "easeInQuart". You can also add the full jQuery UI instead of this file if you prefer -->
 <script src="bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
@@ -82,7 +91,7 @@
 <body>
 <div id="header">
   <div class="logo-container">
-    <img class="logo" src="images/mozhe.png">
+    <img class="logo" src="img/mozhe.png">
   </div>
   <div id="header-options">
     <a>处理数据</a>
@@ -95,8 +104,27 @@
       <div class="heading">
         <h1>群众创造数据无限可能</h1>
       </div>
-  </div>
+  </div> <!--section-->
   <div class="section">
+    <div id="nav-container">
+      <ul class="nav nav-tabs">
+          <li class="nav active"><a href="#categorization" data-toggle="tab">数据分类</a></li>
+          <li class="nav"><a href="#collection" data-toggle="tab">搜集信息</a></li>
+          <li class="nav"><a href="#transcription" data-toggle="tab">音频转录</a></li>
+          <li class="nav"><a href="#questionaire" data-toggle="tab">发布问卷</a></li>
+          <li class="nav"><a href="#unlimited" data-toggle="tab">无限可能</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="categorization">Content inside tab Z</div>
+        <div class="tab-pane fade" id="collection">Content inside tab A</div>
+        <div class="tab-pane fade" id="transcription">Content inside tab B</div>
+        <div class="tab-pane fade" id="questionaire">Content inside tab C</div>
+        <div class="tab-pane fade" id="unlimited">Content inside tab D</div>
+      </div>
+    </div> <!--nav-container-->
+    <!--
     <div class="slide">
       <div class="heading">
         <h1>数据分类</h1>
@@ -122,13 +150,16 @@
         <h1>更多</h1>
       </div> 
     </div>
-  </div>
+    !-->
+  </div> <!--section-->
+  
   <div class="section">
     <div class="heading">
       <h1>了解更多</h1>
     </div> 
-  </div>
-</div>
+  </div> <!--section-->
+
+</div> <!--fullpage-->
 
 </body>
 </html>
