@@ -66,7 +66,7 @@
         controlArrows: true,
         verticalCentered: true,
         resize : false,
-        sectionsColor : ['#D61D1A', '#4BBFC3', '#C63D0F'],
+        sectionsColor : ['#D61D1A', '#F0F1F5', '#C63D0F'],
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
@@ -107,9 +107,60 @@
   </div> <!--section-->
   <div class="section">
     <div id="nav-container">
-      <ul class="nav nav-tabs">
-          <li class="nav active"><a href="#categorization" data-toggle="tab">数据分类</a></li>
-          <li class="nav"><a href="#collection" data-toggle="tab">搜集信息</a></li>
+      <ul class="nav nav-pills">
+          <li class="nav active">
+            <a href="#categorization" data-toggle="tab">
+
+              <!-- categorization icon -->
+              <svg x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" overflow="visible" enable-background="new 0 0 60 60" class="case-icon-categorization">
+                <path d="M1,25h16c0.6,0,1-0.4,1-1V4c0-0.6-0.4-1-1-1H1C0.4,3,0,3.4,0,4v20C0,24.6,0.4,25,1,25z M2,5h14v18H2V5z"/>
+                <path d="M25,25h16c0.6,0,1-0.4,1-1V4c0-0.6-0.4-1-1-1H25c-0.6,0-1,0.4-1,1v20C24,24.6,24.4,25,25,25z M26,5h14v18H26V5z"/>
+                <path d="M20,27H4c-0.6,0-1,0.4-1,1v1h16v20h1c0.6,0,1-0.4,1-1V28C21,27.4,20.6,27,20,27z"/>
+                <path d="M44,27H28c-0.6,0-1,0.4-1,1v1h16v20h1c0.6,0,1-0.4,1-1V28C45,27.4,44.6,27,44,27z"/>
+                <path d="M14,8H4C3.7,8,3.5,8.2,3.5,8.5S3.7,9,4,9h10c0.3,0,0.5-0.2,0.5-0.5S14.3,8,14,8z"/>
+                <path d="M14,11H4c-0.3,0-0.5,0.2-0.5,0.5S3.7,12,4,12h10c0.3,0,0.5-0.2,0.5-0.5S14.3,11,14,11z"/>
+                <path d="M14,14H4c-0.3,0-0.5,0.2-0.5,0.5S3.7,15,4,15h10c0.3,0,0.5-0.2,0.5-0.5S14.3,14,14,14z"/>
+                <path d="M14,17H4c-0.3,0-0.5,0.2-0.5,0.5S3.7,18,4,18h10c0.3,0,0.5-0.2,0.5-0.5S14.3,17,14,17z"/>
+                <path d="M14,20H4c-0.3,0-0.5,0.2-0.5,0.5S3.7,21,4,21h10c0.3,0,0.5-0.2,0.5-0.5S14.3,20,14,20z"/>
+                <path d="M38.5,6h-11C27.2,6,27,6.2,27,6.5v15c0,0.3,0.2,0.5,0.5,0.5h11c0.3,0,0.5-0.2,0.5-0.5v-15C39,6.2,38.8,6,38.5,6z M38,14.9
+                  L36.4,13l-3.6,5l-3.1-2.6L28,17.6V7h10V14.9z"/>
+                <circle cx="30.4" cy="10.4" r="1.5"/>
+                <path d="M41,30H25c-0.6,0-1,0.4-1,1v20c0,0.6,0.4,1,1,1h16c0.6,0,1-0.4,1-1V31C42,30.4,41.6,30,41,30z M40,50H26V32h14V50z"/>
+                <path d="M38,44H28c-0.3,0-0.5,0.2-0.5,0.5S27.7,45,28,45h10c0.3,0,0.5-0.2,0.5-0.5S38.3,44,38,44z"/>
+                <path d="M38,47H28c-0.3,0-0.5,0.2-0.5,0.5S27.7,48,28,48h10c0.3,0,0.5-0.2,0.5-0.5S38.3,47,38,47z"/>
+                <path d="M28,39c0.6,0,1-0.4,1-1c0-0.1,0-0.2,0-0.2l1.8-1.8c0.1,0,0.2,0,0.2,0c0,0,0.1,0,0.1,0l2.9,3.7c0,0.1-0.1,0.2-0.1,0.4
+                  c0,0.6,0.4,1,1,1s1-0.4,1-1c0-0.1,0-0.2,0-0.2l1.8-1.8c0.1,0,0.2,0,0.2,0c0.6,0,1-0.4,1-1s-0.4-1-1-1s-1,0.4-1,1c0,0.1,0,0.2,0,0.2
+                  L35.2,39c-0.1,0-0.2,0-0.2,0c0,0-0.1,0-0.1,0l-2.9-3.7c0-0.1,0.1-0.2,0.1-0.4c0-0.6-0.4-1-1-1s-1,0.4-1,1c0,0.1,0,0.2,0,0.2L28.2,37
+                  c-0.1,0-0.2,0-0.2,0c-0.6,0-1,0.4-1,1S27.4,39,28,39z"/>
+                <path d="M17,30H1c-0.6,0-1,0.4-1,1v20c0,0.6,0.4,1,1,1h16c0.6,0,1-0.4,1-1V31C18,30.4,17.6,30,17,30z M16,50H2V32h14V50z"/>
+                <path d="M9,46c2.8,0,5-2.2,5-5H9v-5c-2.8,0-5,2.2-5,5S6.2,46,9,46z"/>
+                <path d="M10,35v5h5C15,37.2,12.8,35,10,35z"/>
+                <path d="M20,0H4C3.4,0,3,0.4,3,1v1h16v20h1c0.6,0,1-0.4,1-1V1C21,0.4,20.6,0,20,0z"/>
+                <path d="M44,0H28c-0.6,0-1,0.4-1,1v1h16v20h1c0.6,0,1-0.4,1-1V1C45,0.4,44.6,0,44,0z"/>
+              </svg>
+              数据分类
+            </a>
+          </li>
+          <li class="nav">
+            <a href="#collection" data-toggle="tab">
+
+              <!-- collection icon -->
+              <svg x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" overflow="visible" enable-background="new 0 0 60 60" class="case-icon-collection">
+                  <path d="M50.8,47.9C50,49,49,50,47.9,50.8l3.6,3.6C52,54.8,52.5,55,53,55s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L50.8,47.9z"/>
+                  <path d="M10,16H8c-0.6,0-1,0.4-1,1s0.4,1,1,1h2c0.6,0,1-0.4,1-1S10.6,16,10,16z"/>
+                  <path d="M15,16h-2c-0.6,0-1,0.4-1,1s0.4,1,1,1h2c0.6,0,1-0.4,1-1S15.6,16,15,16z"/>
+                  <path d="M20,16h-2c-0.6,0-1,0.4-1,1s0.4,1,1,1h2c0.6,0,1-0.4,1-1S20.6,16,20,16z"/>
+                  <path d="M7,46c-0.6,0-1-0.4-1-1V22h42v9.3c0.7,0.5,1.4,1.1,2,1.8V15c0-1.7-1.3-3-3-3H7c-1.7,0-3,1.3-3,3v30c0,1.7,1.3,3,3,3h24.3
+                    c-0.5-0.6-0.8-1.3-1.2-2H7z M6,15c0-0.6,0.4-1,1-1h40c0.6,0,1,0.4,1,1v5H6V15z"/>
+                  <path d="M52,7H12c-1.7,0-3,1.3-3,3v1h2v-1c0-0.6,0.4-1,1-1h40c0.6,0,1,0.4,1,1v30c0,0.1,0,0.1,0,0.2c0,0.3,0,0.5,0,0.8
+                    c0,0.6-0.1,1.3-0.2,1.9c1.2-0.4,2.2-1.5,2.2-2.9V10C55,8.3,53.7,7,52,7z"/>
+                  <path d="M52,41c0-6.1-4.9-11-11-11s-11,4.9-11,11s4.9,11,11,11S52,47.1,52,41z M41,48c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7
+                    S44.9,48,41,48z"/>
+              </svg>
+
+              搜集信息
+            </a>
+          </li>
           <li class="nav"><a href="#transcription" data-toggle="tab">音频转录</a></li>
           <li class="nav"><a href="#questionaire" data-toggle="tab">发布问卷</a></li>
           <li class="nav"><a href="#unlimited" data-toggle="tab">无限可能</a></li>
@@ -117,7 +168,17 @@
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div class="tab-pane fade in active" id="categorization">Content inside tab Z</div>
+        <div class="tab-pane fade in active" id="categorization">
+          <div class="case-container">
+            <div class="case-tagline">
+              用群众的力量管理数据<br>
+              让数据更有价值
+            </div>
+            <div class="case-description">
+              墨者让你利用群众的力量讲数据完成分类；不管是产品信息、图象、还是网站，只要透过界面上传，墨者都可以在短时间内为你完成分类或者更进阶的处理。<br>我们独特的品管机制能够保证最好的用户完成你的工作，确保您满意数据处理的质量。
+            </div>
+          </div>
+        </div>
         <div class="tab-pane fade" id="collection">Content inside tab A</div>
         <div class="tab-pane fade" id="transcription">Content inside tab B</div>
         <div class="tab-pane fade" id="questionaire">Content inside tab C</div>

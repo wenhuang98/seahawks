@@ -53,3 +53,19 @@
 .fp-prev {
     left: 50px !important;
 }
+
+.case-container{
+	padding: 20px;
+}
+
+.case-tagline {
+	color: #D61D1A;
+	font-size: 200%;
+}
+
+.case-icon-categorization{
+	fill:#FFFFFF;
+}
+.case-icon-collection {
+          fill: #474747;
+        }
