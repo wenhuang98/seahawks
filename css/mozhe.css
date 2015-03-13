@@ -63,9 +63,10 @@
 	font-size: 200%;
 }
 
+.case-icon{
+	fill:#474747;
+}
+
 .case-icon-categorization{
 	fill:#FFFFFF;
 }
-.case-icon-collection {
-          fill: #474747;
-        }
