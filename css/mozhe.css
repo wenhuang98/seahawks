@@ -32,6 +32,18 @@
     vertical-align: top;
 }
 
+#nav-bar{
+	 background-color: #909193;
+}
+
+#nav-bar .nav-tab{
+	padding: 10px 12px;
+}
+
+#nav-bar .active .case-name{
+	color:#FFFFFF;
+}
+
 #header-options {
     position: absolute;
     right: 0px;
@@ -55,7 +67,6 @@
 }
 
 .case-container{
-	padding: 20px;
 }
 
 .case-tagline {
@@ -65,8 +76,24 @@
 
 .case-icon{
 	fill:#474747;
+	width:40px;
+	height: 40px;
+}
+
+.case-name{
+	float: right;
+	font-size:16px;
+	margin-top: 12px;
+	margin-left: 2px;
+	color:#474747;
 }
 
 .case-icon-categorization{
 	fill:#FFFFFF;
+}
+
+#item-container{
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FF0000;
 }
