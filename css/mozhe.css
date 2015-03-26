@@ -44,6 +44,13 @@
 	color:#FFFFFF;
 }
 
+#nav-bar .nav-pills{
+}
+
+#item-container{
+	background-color: #FFFFFF;
+}
+
 #header-options {
     position: absolute;
     right: 0px;
@@ -81,19 +88,24 @@
 }
 
 .case-name{
-	float: right;
 	font-size:16px;
-	margin-top: 12px;
-	margin-left: 2px;
+	margin-top: 6px;
 	color:#474747;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-item-container{
 }
 
 .case-icon-categorization{
 	fill:#FFFFFF;
 }
 
-#item-container{
-	margin-right: auto;
-	margin-left: auto;
-	background-color: #FF0000;
+.case-item-container{
+
+}
+
+#nav-bar .nav-pills .active{
+    background-color: #FF0000;
 }
