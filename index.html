@@ -33,10 +33,10 @@
     $('#fullpage').fullpage({
         //Navigation
         menu: false,
-        anchors:['landing', 'scenario1','scenario2','scenario3','tasks','signup'],
+        anchors:['landing', 'student','mom','commuter','tasks','signup'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['landing', 'scenario1', 'scenario2','scenario3','tasks','signup'],
+        navigationTooltips: ['Landing', 'Student', 'Mom','Commuter','Tasks','Signup'],
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
 
@@ -64,12 +64,12 @@
 
         //Design
         controlArrows: true,
-        verticalCentered: true,
+        verticalCentered: false,
         resize : false,
         sectionsColor : ['#D8D8D8', '#2E96E7', '#EFAA30','#98B855','#D8D8D8','#D8D8D8'],
-        paddingTop: '3em',
-        paddingBottom: '10px',
-        fixedElements: '#header, .footer',
+        paddingTop: '0',
+        paddingBottom: '0',
+        fixedElements: '',
         responsive: 0,
 
         //Custom selectors
@@ -77,8 +77,29 @@
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
+        onLeave: function(index, nextIndex, direction){
+          if(index==2){
+            $('#contributor-student, #scenario-student').removeClass('active');
+          }else if(index==3){
+            $('#contributor-mom, #scenario-mom').removeClass('active');
+          }else if(index==4){
+            $('#contributor-commuter, #scenario-commuter').removeClass('active');
+          }else if(index==5){
+            $('#using-mobile, #task-pop1, #task-pop2, #task-pop3, #task-pop4').removeClass('active');
+          }
+        },
+        afterLoad: function(anchorLink, index){
+          if(index==2){
+            $('#contributor-student, #scenario-student').addClass('active');
+
+          }else if(index==3){
+            $('#contributor-mom, #scenario-mom').addClass('active');
+          }else if(index==4){
+            $('#contributor-commuter, #scenario-commuter').addClass('active');
+          }else if(index==5){
+            $('#using-mobile, #task-pop1, #task-pop2, #task-pop3, #task-pop4').addClass('active');
+          }
+        },
         afterRender: function(){},
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
@@ -89,19 +110,21 @@
 </head>
 
 <body>
-  <!--
-<div id="header">
-  <div id="header-options">
-  </div>
-</div>
-!-->
+
 <div id="fullpage">
-  <div class="section gray-gradient-bg" id="section-landing">
+  <div class="section gray-pattern-bg" id="section-landing">
     <div class="container-fluid">
       <div class="content-wrapper">
         <div class="row-toppadding">
         </div>
         <div class="row-logo">
+
+          <div class="logo-container">
+          <div class="img-container">
+          <img src="img/jizhi_logo.png">
+        </div>
+      </div>
+
       </div>
 
       <div class="row-tagline">
@@ -115,11 +138,15 @@
 
       </div>
 
+      <div class="row-gap-1"></div>
+
       <div class="row-slogan">
         <div class="slogan set-vmiddle set-center">
           每个人都能随时随地轻松赚
         </div>
       </div>
+
+      <div class="row-gap-1"></div>
 
       <div class="row-contributors">
         <div class="img-container">
@@ -132,30 +159,11 @@
       </div>
     </div>
 
-    <!--
-    <div class="container-fluid">
-      
-      <div class="set-center" id="tagline-container">
-        <div id="tagline">
-          群众创造数据无限可能
-        </div>
-      </div>
-      <div class="set-center" id="slogan-container">
-        <div id="slogan">
-          每个人都能随时随地轻松赚
-        </div>
-      </div>
-      <div class="set-center" id="contributors-container">
-        <div id="contributors">
-          <img src="img/contributors.png">
-        </div>
-      </div>
+  </div> <!--SECTION: LANDING END-->
 
-    </div>
--->
-  </div> <!--section-->
+  <!-- SECTION: SCENARIO-STUDENT -->
   
-  <div class="section" id="section-scenario1">
+  <div class="section" id="section-scenario-student">
     
     <div class="container-fluid">
 
@@ -164,22 +172,22 @@
       </div>
 
       <div class="row-heading">
-        <div class="scenario-heading set-vmiddle set-center">
+        <div class="heading-white set-vmiddle set-center">
           课余时间也能轻松赚
         </div>
       </div>
 
       <div class="row-signup">
         <div class="set-vmiddle">
-        <a href="#signup">
-            <div class="set-center button gosignup-button">开始赚钱</div>
-        </a>
+        <a class="set-center a-button gosignup-button" href="#signup">开始赚钱</a>
       </div>
       </div>
 
       <div class="row-scenario">
+        <div id="scenario-student" class="scenario">
         <div class="img-container">
           <img class="scenario-background" src="img/scenario_background.png">
+        
 
           <div class="coins-container set-center">
               <div class="coin"><img src="img/coin.png"></div>
@@ -192,49 +200,58 @@
               <div class="coin"><img src="img/coin.png"></div>
           </div>
 
-          <img class="scenario-img" src="img/scenario_student.png">
+
+          <img class="scenario-img" src="img/scenario_student.png"></div>
+        </div>
          </div>
-    </div>
+
+    <div class="row-gap-2"></div>
 
       <div class="row-contributor">
+        <div id="contributor-student" class="contributor">
         <div class="img-container">
         <img src="img/contributor_student.png">
       </div>
       </div>
+    </div>
 
-      <div class="row-bottompadding">
-      </div>
+      <div class="row-bottompadding"></div>
+
     </div>
 
   </div>
 
-  </div> <!--section-->
+  </div> <!-- SECTION: SCENARIO-STUDENT END-->
   
-  <div class="section" id="section-scenario2">
 
- <div class="container-fluid">
-  <div class="content-wrapper">
 
-    <div class="row-toppadding">
+  <!-- SECTION: SCENARIO-MOM -->
+
+  <div class="section" id="section-scenario-mom">
+    
+    <div class="container-fluid">
+
+    <div class="content-wrapper">
+      <div class="row-toppadding">
       </div>
 
       <div class="row-heading">
-        <div class="scenario-heading set-vmiddle set-center">
+        <div class="heading-white set-vmiddle set-center">
           在家带孩子也能轻松赚
         </div>
       </div>
 
       <div class="row-signup">
         <div class="set-vmiddle">
-        <a href="#signup">
-            <div class="set-center button gosignup-button">开始赚钱</div>
-        </a>
+        <a class="set-center a-button gosignup-button" href="#signup">开始赚钱</a>
       </div>
       </div>
 
       <div class="row-scenario">
+        <div id="scenario-mom" class="scenario">
         <div class="img-container">
           <img class="scenario-background" src="img/scenario_background.png">
+        
 
           <div class="coins-container set-center">
               <div class="coin"><img src="img/coin.png"></div>
@@ -247,76 +264,56 @@
               <div class="coin"><img src="img/coin.png"></div>
           </div>
 
-          <img class="scenario-img" src="img/scenario_mom.png">
+
+          <img class="scenario-img" src="img/scenario_mom.png"></div>
+        </div>
          </div>
-    </div>
+
+    <div class="row-gap-2"></div>
 
       <div class="row-contributor">
+        <div id="contributor-mom" class="contributor">
         <div class="img-container">
         <img src="img/contributor_mom.png">
       </div>
       </div>
-
-      <div class="row-bottompadding">
-      </div>
-
-
-  </div>
-
-  </div>
-
-<!--
-
-    <div class="set-center scenario-heading">
-      在家带孩子也能轻松赚
     </div>
-    <a href="#signup">
-      <div class="set-center button gosignup-button">
-        开始赚钱
-      </div>
-    </a>
-      <div class="set-center scenario-img-container">
-        <div>
-          <img src="img/scenario_img_background.png">
-        </div>
-      </div>
-      <div class="set-center contributor-container">
-        <img src="img/contributor_mom.png">
-      </div>
--->
 
-<!--
-  <div id="snow">
+      <div class="row-bottompadding"></div>
+
+    </div>
+
   </div>
-!-->
 
-  </div> <!--section-->
+  </div> <!--SECTION: SCENARIO-MOM END-->
 
-    <div class="section" id="section-scenario3">
+   <!-- SECTION: SCENARIO-COMMUTER -->
 
-      <div class="container-fluid">
-  <div class="content-wrapper">
+  <div class="section" id="section-scenario-commuter">
+    
+    <div class="container-fluid">
 
-    <div class="row-toppadding">
+    <div class="content-wrapper">
+      <div class="row-toppadding">
       </div>
 
       <div class="row-heading">
-        <div class="scenario-heading set-vmiddle set-center">
+        <div class="heading-white set-vmiddle set-center">
           上班搭地铁也能轻松赚
         </div>
       </div>
 
       <div class="row-signup">
         <div class="set-vmiddle">
-        <a href="#signup">
-            <div class="set-center button gosignup-button">开始赚钱</div>
-        </a>
+        <a class="set-center a-button gosignup-button" href="#signup">开始赚钱</a>
       </div>
       </div>
 
       <div class="row-scenario">
+        <div id="scenario-commuter" class="scenario">
         <div class="img-container">
           <img class="scenario-background" src="img/scenario_background_commuter.png">
+        
 
           <div class="coins-container set-center">
               <div class="coin"><img src="img/coin.png"></div>
@@ -329,73 +326,242 @@
               <div class="coin"><img src="img/coin.png"></div>
           </div>
 
-          <img class="scenario-img" src="img/scenario_commuter.png">
+
+          <img class="scenario-img" src="img/scenario_commuter.png"></div>
+        </div>
          </div>
-    </div>
+
+    <div class="row-gap-2"></div>
 
       <div class="row-contributor">
+        <div id="contributor-commuter" class="contributor">
         <div class="img-container">
         <img src="img/contributor_commuter.png">
       </div>
       </div>
-
-      <div class="row-bottompadding">
-      </div>
-
-
-  </div>
-
-  </div>
-
-
-      <!--
-      <div class="set-center scenario-heading">
-      上班搭地铁也能轻松赚
     </div>
-    <a href="#signup">
-      <div class="set-center button gosignup-button">
-        开始赚钱
-      </div>
-    </a>
-      <div class="set-center scenario-img-container">
-        <div>
-          <img src="img/scenario_img_background.png">
+
+      <div class="row-bottompadding"></div>
+
+    </div>
+
+  </div>
+
+  </div> <!--SECTION:SCENARIO-COMMUTER END-->
+
+
+<!-- SECTION: TASKS -->
+      
+      <div class="section gray-pattern-bg">
+
+        <div class="container-fluid">
+      <div class="content-wrapper">
+        <div class="row-toppadding">
+        </div>
+        <div class="row-heading">
+          <div class="heading-black set-vmiddle set-center">
+          选择任务轻松赚
         </div>
       </div>
-      <div class="set-center contributor-container">
-        <img src="img/contributor_commuter.png">
+
+
+      <div class="row-description">
+
+
+        <div class="section-description set-center set-vmiddle body-text">
+          集智是一个有弹性的线上工作平台，用户能依自己的喜好及时间选择任务，当任务完成后系统会自动将报酬打到用户绑定的钱包 (支付宝/微信)
+        </div>
+
+        
+        </div>
+
+
+      <div class="row-signup">
+        <div class="set-vmiddle">
+        <a class="set-center a-button gosignup-button" href="#signup">开始赚钱</a>
+      </div>
+        
       </div>
 
-    -->
-      <!--
-    <div class="set-center scenario-heading">
-      上班搭地铁也能轻松赚
-    </div>
 
-    <a href="#signup">
-    <div class="set-center button gosignup-button">
-      开始赚钱
-    </div>
-  </a> 
+      <div class="row-tasks">
+        <div id="using-mobile">
+          <div class="img-container">
+            <img src="img/using_mobile.png">
+          </div>
+        </div>
 
-<div class="set-center scenario" id="scenario-student">
-    </div>
+        <!-- TASK-CATEGORIZATION -->
+        <div id="task-pop1"> 
+          <div class="img-container">
+            <img src="img/jizhi_task_pop_background_1.png">
+          </div>
 
-!-->
 
-  </div> <!--section-->
+          <div class="task-text-container" id="task-text-container-categorization">
 
-      <div class="section gray-gradient-bg">
-        <!--
-    <div class="heading">
-      <h1>选择任务轻松赚</h1>
-    </div> 
-    !-->
-  </div> <!--section-->
+            <div class="set-vmiddle">
+            <div class="task-title">
+              <div class="task-icon">
+                <div class="img-container">
+                  <img src="img/jizhi_task_icon_categorization.png">
+                </div>
+              </div>
+              <div class="task-title-text set-vmiddle">
+                数据分类
+              </div>
+            </div>
+            <div class="task-description body-text">
+          将图片，文字等数据分门别类
+        </div>
+      </div>
+
+        </div>
+
+
+        </div>
+
+        <!-- TASK-COLLECTION -->
+         <div id="task-pop2">
+          <div class="img-container">
+            <img src="img/jizhi_task_pop_background_2.png">
+          </div>
+
+          <div class="task-text-container" id="task-text-container-collection">
+
+            <div class="set-vmiddle">
+            <div class="task-title">
+              <div class="task-icon">
+                <div class="img-container">
+                  <img src="img/jizhi_task_icon_collection.png">
+                </div>
+              </div>
+              <div class="task-title-text set-vmiddle">
+                搜集信息
+              </div>
+            </div>
+            <div class="task-description body-text">
+          在网上搜寻用户欲取得的信息
+        </div>
+      </div>
+
+        </div>
+
+          
+        </div>
+
+        <!-- TASK-QUESTIONNAIRE -->
+        <div id="task-pop3">
+          <div class="img-container">
+            <img src="img/jizhi_task_pop_background_3.png">
+          </div>
+
+          <div class="task-text-container" id="task-text-container-questionnaire">
+
+            <div class="set-vmiddle">
+            <div class="task-title">
+              <div class="task-icon">
+                <div class="img-container">
+                  <img src="img/jizhi_task_icon_questionnaire.png">
+                </div>
+              </div>
+              <div class="task-title-text set-vmiddle">
+                填写问卷
+              </div>
+            </div>
+            <div class="task-description body-text">
+          依据个人信息填写问卷
+        </div>
+      </div>
+
+        </div>
+          
+        </div>
+
+        <!-- TASK-TRANSCRIPTION -->
+        <div id="task-pop4">
+          <div class="img-container">
+            <img src="img/jizhi_task_pop_background_4.png">
+          </div>
+
+          <div class="task-text-container" id="task-text-container-transcription">
+
+            <div class="set-vmiddle">
+            <div class="task-title">
+              <div class="task-icon">
+                <div class="img-container">
+                  <img src="img/jizhi_task_icon_transcription.png">
+                </div>
+              </div>
+              <div class="task-title-text set-vmiddle">
+                音频转换
+              </div>
+            </div>
+            <div class="task-description body-text">
+          将音频的对话转录成文字档
+        </div>
+      </div>
+        </div>
+        </div>
+
+      </div>
+
+      </div>
+  </div>
+  </div> <!--SECTION: TASKS END-->
+
+  <!-- SECTION: SIGNUP -->
 
   <div class="section gray-gradient-bg">
-    抢先轻松赚
-  </div> <!--section-->
+    
+    <div class="container-fluid">
+      <div class="content-wrapper">
+    <div class="row-toppadding">
+        </div>
+        <div class="row-heading">
+          <div class="heading-black set-vmiddle set-center">
+          抢先轻松赚
+        </div>
+      </div>
+
+      <div class="row-description">
+        <div class="section-description set-center set-vmiddle body-text">
+          目前我们的系统仍在开发中，请留下你的邮箱或手机号码，成为我们第一批内测用户，抢先一步开始在网上轻松赚
+        </div>
+        
+        </div>
+
+        <div class="row-inputform">
+
+          <div class="inputform-container set-center">
+
+            <form>
+              <input class="input-box input-phonemail" type="text" name="contact" placeholder="邮箱或手机号码">
+
+              <button class="button submit-button" type="submit">我要赚钱</button>
+          
+      </form>
+      </div>
+        </div>
+
+
+        <div class="row-footer">
+          <div class="footer">
+            <div class="set-vmiddle">
+          <div class="footer-text set-center">
+          关于集智 ｜ 联系我们
+        </div>
+        <div class="copyright-text set-center">
+          © 2015 XXXXXXXXXXXXX 版权所有
+        </div>
+      </div>
+        </div>
+      </div>
+</div>
+</div>
+
+    
+  </div> <!--SECTION: SIGNUP END-->
 
 </div> <!--fullpage-->
 
